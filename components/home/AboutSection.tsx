@@ -56,7 +56,7 @@ export default function AboutSection() {
                 fill
                 className="object-cover object-center"
               />
-              
+
               {/* Text overlay at the bottom center */}
               <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/90 via-black/50 to-transparent p-6 pt-12 flex flex-col items-center justify-end text-center z-10">
                 <p className="font-heading text-2xl text-white tracking-wider mb-1">ANDREA MUSAR</p>
@@ -98,8 +98,8 @@ export default function AboutSection() {
             />
 
             <p className="text-brand-gray-light leading-relaxed mt-6 mb-8">
-              Mi mision es simple: ayudarte a alcanzar el cuerpo que quieres con metodos 
-              cientificos, disciplina y acompanamiento constante. No importa tu punto de 
+              Mi mision es simple: ayudarte a alcanzar el cuerpo que quieres con metodos
+              cientificos, disciplina y acompanamiento constante. No importa tu punto de
               partida — lo importante es que des el primer paso.
             </p>
 
