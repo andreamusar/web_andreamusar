@@ -139,10 +139,10 @@ export default function HeroSection() {
           >
             {/* Portrait Image of Andrea */}
             <div className="relative w-full aspect-[4/5] lg:aspect-[3/4] max-w-md mx-auto z-10">
-              {/* Decorative border behind */}
-              <div className="absolute -inset-4 border-2 border-brand-orange/20 rounded-2xl -z-10 translate-x-2 lg:translate-x-4 translate-y-2 lg:translate-y-4" />
+              {/* Decorative border behind - perfectly aligned */}
+              <div className="absolute -inset-2 border-2 border-brand-orange/30 rounded-2xl -z-10" />
               
-              <div className="relative w-full h-full rounded-2xl overflow-hidden border border-brand-border/50">
+              <div className="relative w-full h-full rounded-2xl overflow-hidden border border-brand-border/50 bg-brand-charcoal">
                 <Image
                   src="/images/hero.jpg"
                   alt="Andrea Musar"
@@ -151,17 +151,17 @@ export default function HeroSection() {
                   priority
                 />
               </div>
+            </div>
 
-              {/* Keep a simplified overlay of stats positioned on the image on desktop */}
-              <div className="absolute -bottom-6 -left-6 lg:left-[-10%] glass-card p-4 lg:p-6 w-full lg:max-w-xs z-20 shadow-2xl">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-brand-orange flex items-center justify-center flex-shrink-0">
-                    <Dumbbell size={24} className="text-black" />
-                  </div>
-                  <div>
-                    <div className="font-heading text-lg lg:text-xl text-white tracking-wider">ANDREA MUSAR</div>
-                    <div className="text-brand-gray-light text-xs lg:text-sm">Personal Trainer Certificada</div>
-                  </div>
+            {/* Stats Label moved outside image to avoid overlap */}
+            <div className="mt-8 flex justify-center">
+              <div className="glass-card p-4 flex items-center gap-4 w-full max-w-md">
+                <div className="w-12 h-12 bg-brand-orange flex items-center justify-center flex-shrink-0">
+                  <Dumbbell size={24} className="text-black" />
+                </div>
+                <div>
+                  <div className="font-heading text-lg lg:text-xl text-white tracking-wider">ANDREA MUSAR</div>
+                  <div className="text-brand-gray-light text-xs lg:text-sm">Personal Trainer Certificada</div>
                 </div>
               </div>
             </div>
