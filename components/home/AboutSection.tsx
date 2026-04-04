@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { CheckCircle, Award, Users, Target } from 'lucide-react'
 import SectionTitle from '@/components/ui/SectionTitle'
 
@@ -47,17 +48,21 @@ export default function AboutSection() {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            {/* Main image placeholder — replaced with styled card */}
-            <div className="relative aspect-[3/4] max-w-sm mx-auto">
-              <div className="absolute inset-0 bg-gradient-to-br from-brand-charcoal-light to-brand-black border border-brand-border flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="w-28 h-28 bg-brand-orange/10 border-2 border-brand-orange/30 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <span className="font-heading text-5xl text-brand-orange">AM</span>
-                  </div>
-                  <p className="font-heading text-2xl text-white tracking-wider mb-2">ANDREA MUSAR</p>
-                  <p className="text-brand-orange text-sm uppercase tracking-widest">Personal Trainer</p>
-                  <p className="text-brand-gray-light text-sm mt-1">Lima, Peru</p>
-                </div>
+            {/* Main Image with text overlay */}
+            <div className="relative aspect-[3/4] max-w-sm mx-auto rounded-xl overflow-hidden border border-brand-border/50">
+              <Image
+                src="/images/about.jpg"
+                alt="Andrea Musar"
+                fill
+                className="object-cover object-center"
+              />
+              
+              {/* Text overlay at the bottom center */}
+              <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/90 via-black/50 to-transparent p-6 pt-12 flex flex-col items-center justify-end text-center z-10">
+                <p className="font-heading text-2xl text-white tracking-wider mb-1">ANDREA MUSAR</p>
+                <p className="text-brand-orange text-xs sm:text-sm uppercase tracking-widest font-bold">
+                  Personal Trainer, <span className="text-brand-gray-light font-normal text-xs">Lima, Peru</span>
+                </p>
               </div>
 
               {/* Floating badge */}
