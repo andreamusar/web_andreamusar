@@ -138,11 +138,12 @@ export default function HeroSection() {
             className="relative block mt-12 lg:mt-0"
           >
             {/* Portrait Image of Andrea */}
-            <div className="relative w-full aspect-[4/5] lg:aspect-[3/4] max-w-md mx-auto z-10">
+            <div className="relative w-full max-w-xs sm:max-w-md mx-auto z-10">
               {/* Decorative border behind - perfectly aligned */}
               <div className="absolute -inset-2 border-2 border-brand-orange/30 rounded-2xl -z-10" />
               
-              <div className="relative w-full h-full rounded-2xl overflow-hidden border border-brand-border/50 bg-brand-charcoal">
+              {/* Image Container with aspect ratio applied directly to fix iOS Safari height issues */}
+              <div className="relative w-full aspect-[4/5] lg:aspect-[3/4] rounded-2xl overflow-hidden border border-brand-border/50 bg-brand-charcoal">
                 <Image
                   src="/images/hero.jpg"
                   alt="Andrea Musar"
