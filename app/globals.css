@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-bebas: 'Bebas Neue', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+  }
+
+  body {
+    background-color: #0A0A0A;
+    color: #FFFFFF;
+    font-family: var(--font-inter), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-bebas), sans-serif;
+    letter-spacing: 0.05em;
+  }
+
+  ::selection {
+    background-color: #F97316;
+    color: #0A0A0A;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0A0A0A;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #F97316;
+    border-radius: 3px;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand-orange text-black font-bold text-sm uppercase tracking-widest rounded-none transition-all duration-300 hover:bg-brand-orange-dark hover:scale-105 active:scale-95;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white text-white font-bold text-sm uppercase tracking-widest rounded-none transition-all duration-300 hover:bg-white hover:text-black hover:scale-105 active:scale-95;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 text-brand-orange font-semibold text-sm uppercase tracking-widest transition-all duration-300 hover:text-brand-orange-light;
+  }
+
+  .section-title {
+    @apply font-heading text-5xl md:text-7xl text-white uppercase tracking-wider;
+  }
+
+  .section-subtitle {
+    @apply text-brand-gray-light text-lg font-light max-w-2xl;
+  }
+
+  .card-dark {
+    @apply bg-brand-charcoal border border-brand-border rounded-none;
+  }
+
+  .tag {
+    @apply inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest bg-brand-orange text-black;
+  }
+
+  .tag-outline {
+    @apply inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest border border-brand-orange text-brand-orange;
+  }
+
+  .input-dark {
+    @apply w-full bg-brand-charcoal-light border border-brand-border text-white placeholder-brand-gray px-4 py-3 focus:outline-none focus:border-brand-orange transition-colors duration-200;
+  }
+
+  .select-dark {
+    @apply w-full bg-brand-charcoal-light border border-brand-border text-white px-4 py-3 focus:outline-none focus:border-brand-orange transition-colors duration-200;
+  }
+
+  .divider-orange {
+    @apply w-16 h-1 bg-brand-orange;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-brand-orange to-brand-orange-light bg-clip-text text-transparent;
+  }
+
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-sm border border-white/10;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 20px rgba(0,0,0,0.8);
+  }
+
+  .animate-delay-100 { animation-delay: 100ms; }
+  .animate-delay-200 { animation-delay: 200ms; }
+  .animate-delay-300 { animation-delay: 300ms; }
+  .animate-delay-400 { animation-delay: 400ms; }
+  .animate-delay-500 { animation-delay: 500ms; }
+}
+
+/* Hero section noise overlay */
+.hero-noise::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+/* Orange glow effect */
+.glow-orange {
+  box-shadow: 0 0 30px rgba(249, 115, 22, 0.3), 0 0 60px rgba(249, 115, 22, 0.1);
+}
+
+/* Orange text glow */
+.text-glow-orange {
+  text-shadow: 0 0 30px rgba(249, 115, 22, 0.5);
+}
