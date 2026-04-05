@@ -199,14 +199,15 @@ export default function AdminProductsPage() {
                 <textarea className="input-dark resize-none" rows={2} value={formData.usage_tips ?? ''} onChange={e => setFormData({ ...formData, usage_tips: e.target.value })} placeholder="Indicaciones de uso..." />
               </div>
 
-              {/* Image upload placeholder */}
+              {/* Image upload Functional Input */}
               <div>
                 <label className="text-xs font-bold text-brand-gray-light uppercase tracking-widest block mb-2">Imagen</label>
-                <div className="border-2 border-dashed border-brand-border p-8 text-center hover:border-brand-orange transition-colors cursor-pointer">
+                <label className="block border-2 border-dashed border-brand-border p-8 text-center hover:border-brand-orange transition-colors cursor-pointer rounded bg-brand-black/20">
+                  <input type="file" accept="image/*" className="hidden" />
                   <Upload size={24} className="text-brand-gray mx-auto mb-2" />
-                  <p className="text-brand-gray-light text-xs">Haz clic para subir imagen a Supabase Storage</p>
+                  <p className="text-brand-gray-light text-xs">Toca aquí para seleccionar una imagen de tu galería</p>
                   <p className="text-brand-gray text-xs mt-1">PNG, JPG, WebP hasta 5MB</p>
-                </div>
+                </label>
               </div>
             </div>
 

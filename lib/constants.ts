@@ -4,9 +4,9 @@ export const SITE_CONFIG = {
   description:
     'Entrenadora personal en Lima, Peru. Planes de entrenamiento online y presencial, suplementacion deportiva y planes nutricionales personalizados.',
   url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://andreamusar.com',
-  whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '51999999999',
-  instagram: process.env.NEXT_PUBLIC_INSTAGRAM_URL ?? 'https://instagram.com/andreamusar',
-  tiktok: process.env.NEXT_PUBLIC_TIKTOK_URL ?? 'https://tiktok.com/@andreamusar',
+  whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '51906427238',
+  instagram: process.env.NEXT_PUBLIC_INSTAGRAM_URL ?? 'https://www.instagram.com/andreamusar',
+  tiktok: process.env.NEXT_PUBLIC_TIKTOK_URL ?? 'https://www.tiktok.com/@andreamusar',
   email: 'hola@andreamusar.com',
   location: 'Santa Anita, Lima, Peru',
   businessHours: {

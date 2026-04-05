@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { SITE_CONFIG } from '@/lib/constants'
 
 export default function WhatsAppButton() {
-  const message = 'Hola Andrea! Me interesa saber mas sobre tus servicios de entrenamiento personal.'
+  const message = 'Hola Andrea! 👋 Vengo de tu página web y me gustaría pedirte información.'
   const url = `https://wa.me/${SITE_CONFIG.whatsapp}?text=${encodeURIComponent(message)}`
 
   return (
